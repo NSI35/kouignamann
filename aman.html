@@ -7,11 +7,12 @@
 </head>
 <body>
 
+<script src="aman.js"></script>
 <header>
   <div class="header-left">AUTEURS : Igor RETIEF, Jules Desevedavy</div>
   <div class="header-center">LE KOUIGN AMANN</div>
   <div class="header-right">
-    <img src="logo.png" alt="Logo" class="logo">
+   <img src="logo.png" alt="Logo" class="logo">
   </div>
 </header>
 
@@ -24,24 +25,26 @@
 </nav>
 
 <main>
-  <section class="left-col">
-  <h2>Liste des Ingrédients</h2>
+   <section class="left-col">
+    <h2>Nombre de Kouign Amann:</h2>
+    <input type="number" id="nombreKouign" min="1" value="1">
+    <button onclick="mettreAJourIngrédients()">Mettre à jour</button>
+    <h2>Liste des Ingrédients</h2>
+    <br>
+    <h3>Pâte à pain à la main :</h3>
+    <p><span id="sel"><strong>1 cuillère à café</strong></span> de sel</p>
+	<p><span id="levure"><strong>5 g</strong></span> de levure de boulanger</p>
+	<p><span id="farine"><strong>175 g</strong></span> de farine</p>
+	<p><span id="eau"><strong>12.5 cl</strong></span> d'eau tiède</p>
 	<br>
-  <h3>Pâte à pain à la main :</h3>
-  <p><strong>1 cuillère à café</strong> de sel</p>
-  <p><strong>5 g</strong> de levure de boulanger</p>
-  <p><strong>175 g</strong> de farine</p>
-  <p><strong>12.5 cl</strong> d'eau tiède</p>
-
-	<br>
-  <h3>Pâte à pain en machine (750 g):</h3>
-  <p><strong>100 g</strong> de sucre pour chaque kouign amann</p>
-  <p><strong>100 g</strong> de beurre pour chaque kouign amann</p>
-  <p><strong>4.5 g</strong> de sel</p>
-  <p><strong>225 g</strong> de farine blanche</p>
-  <p><strong>3 g</strong> de levure de boulanger lyophilisée</p>
-  <p><strong>15 cl</strong> d'eau</p>
-</section>
+	<h3>Pour la pâte à pain en machine (750 g):</h3>
+	<p><span id="sucre"><strong>100 g</strong></span> de sucre pour chaque kouign amann</p>
+	<p><span id="beurre"><strong>100 g</strong></span> de beurre pour chaque kouign amann</p>
+	<p><span id="selPate"><strong>4.5 g</strong></span> de sel</p>
+	<p><span id="farineMachine"><strong>225 g</strong></span> de farine blanche</p>
+	<p><span id="levureMachine"><strong>3 g</strong></span> de levure de boulanger lyophilisée</p>
+	<p><span id="eauMachine"><strong>15 cl</strong></span> d'eau</p>
+  </section>
 
   <section class="center-col">
     <article class="histoire">
@@ -49,27 +52,27 @@
       <p>Le Kouign Amann est une spécialité bretonne originaire de Douarnenez, une ville portuaire du Finistère en Bretagne, France. 
       Son nom provient du breton : "kouign" signifie "gâteau" et "amann" veut dire "beurre", ce qui reflète bien sa composition riche et savoureuse.</p>
     </article>
-	  
+    
     <article class="preparation">
-  <h2>Préparation</h2>
-  <p><strong>Étape 1 :</strong> À la MAP, sortir la pâte de la MAP et la mettre 1 h au frigo.</p>
-  <p><strong>Étape 2 :</strong> À la main, préparer le levain (levure + eau + 1 cuillère à soupe de farine) et laisser prendre 10 min.</p>
-  <p><strong>Étape 3 :</strong> Mélanger levain + eau + farine + sel : la pâte doit être homogène (elle reste collante). Laisser lever la pâte 1 h 30 sous un torchon. Puis réserver 1 h au frigo.</p>
-  <p><strong>Étape 4 :</strong> Partager la pâte en 2.</p>
-  <p><strong>Étape 5 :</strong> Sur un torchon fariné ou du papier sulfurisé, mettre la pâte farinée.</p>
-  <p><strong>Étape 6 :</strong> Étaler au rouleau la pâte (rond de 30 cm environ).</p>
-  <p><strong>Étape 7 :</strong> Aplatir 200 g de beurre avec la paume de la main (sur le papier beurre) et décoller cette "galette" de beurre pour la déposer sur la pâte étalée.</p>
-  <p><strong>Étape 8 :</strong> Verser 200 g de sucre dessus.</p>
-  <p><strong>Étape 9 :</strong> Rabattre les côtés sur le beurre sucré.</p>
-  <p><strong>Étape 10 :</strong> Étaler doucement (refariner dessus-dessous avant) pour obtenir un rectangle.</p>
-  <p><strong>Étape 11 :</strong> Plier en trois (rabattre un côté puis l'autre par-dessus) et tourner d'un quart de tour.</p>
-  <p><strong>Étape 12 :</strong> Renouveler l'opération : étaler, plier, tourner.</p>
-  <p><strong>Étape 13 :</strong> Étaler à nouveau, en carré plutôt.</p>
-  <p><strong>Étape 14 :</strong> Plier en 2.</p>
-  <p><strong>Étape 15 :</strong> Poser le kouign sur un plat beurré ou du papier sulfurisé et cuire 25 min, à 190°, thermostat 6-7.</p>
-  <p><strong>Étape 16 :</strong> Renouveler l'opération pour le deuxième kouign amann.</p>
-</article>
-
+      <h2>Préparation 1h02
+		  <br>Cuisson 25 min</h2>
+      <p><strong>Étape 1 :</strong> À la MAP, sortir la pâte de la MAP et la mettre 1 h au frigo.</p>
+      <p><strong>Étape 2 :</strong> À la main, préparer le levain (levure + eau + 1 cuillère à soupe de farine) et laisser prendre 10 min.</p>
+      <p><strong>Étape 3 :</strong> Mélanger levain + eau + farine + sel : la pâte doit être homogène (elle reste collante). Laisser lever la pâte 1 h 30 sous un torchon. Puis réserver 1 h au frigo.</p>
+      <p><strong>Étape 4 :</strong> Partager la pâte en 2.</p>
+      <p><strong>Étape 5 :</strong> Sur un torchon fariné ou du papier sulfurisé, mettre la pâte farinée.</p>
+      <p><strong>Étape 6 :</strong> Étaler au rouleau la pâte (rond de 30 cm environ).</p>
+      <p><strong>Étape 7 :</strong> Aplatir 200 g de beurre avec la paume de la main (sur le papier beurre) et décoller cette "galette" de beurre pour la déposer sur la pâte étalée.</p>
+      <p><strong>Étape 8 :</strong> Verser 200 g de sucre dessus.</p>
+      <p><strong>Étape 9 :</strong> Rabattre les côtés sur le beurre sucré.</p>
+      <p><strong>Étape 10 :</strong> Étaler doucement (refariner dessus-dessous avant) pour obtenir un rectangle.</p>
+      <p><strong>Étape 11 :</strong> Plier en trois (rabattre un côté puis l'autre par-dessus) et tourner d'un quart de tour.</p>
+      <p><strong>Étape 12 :</strong> Renouveler l'opération : étaler, plier, tourner.</p>
+      <p><strong>Étape 13 :</strong> Étaler à nouveau, en carré plutôt.</p>
+      <p><strong>Étape 14 :</strong> Plier en 2.</p>
+      <p><strong>Étape 15 :</strong> Poser le kouign sur un plat beurré ou du papier sulfurisé et cuire 25 min, à 190°, thermostat 6-7.</p>
+      <p><strong>Étape 16 :</strong> Renouveler l'opération pour le deuxième kouign amann.</p>
+    </article>
   </section>
 
   <section class="right-col">
