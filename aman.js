@@ -41,3 +41,21 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 500); 
     });
 });
+
+
+function toggleMode() {
+    document.body.classList.toggle("dark-mode");
+    const btn = document.querySelector(".toggle-mode");
+    btn.textContent = document.body.classList.contains("dark-mode") ? "☀️ Mode Clair" : "🌙 Mode Sombre";
+
+    // Sauvegarde la préférence de l'utilisateur
+    localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+}
+
+// Appliquer le mode sombre si enregistré dans localStorage
+document.addEventListener("DOMContentLoaded", () => {
+    if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-mode");
+        document.querySelector(".toggle-mode").textContent = "☀️ Mode Clair";
+    }
+});

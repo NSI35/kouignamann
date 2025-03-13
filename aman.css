@@ -140,3 +140,116 @@ main {
 img {
     transition: opacity 0.5s ease-in-out;
 }
+
+
+/* Ajout du mode sombre */
+:root {
+  --background-color: #f8f8f8;
+  --text-color: #333;
+  --header-bg: #fff;
+  --nav-bg: #aaa;
+  --box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  --border-color: #ccc;
+  --button-bg: #8B4513; /* Marron foncé rappelant le caramel */
+  --button-hover-bg: #A0522D; /* Marron plus clair */
+  --input-border: #8B4513;
+  --input-bg: #FAEBD7; /* Beige rappelant la pâte */
+  --input-text: #5A2D0C; /* Marron foncé pour l'écriture */
+}
+
+.dark-mode {
+  --background-color: #222;
+  --text-color: #f8f8f8;
+  --header-bg: #333;
+  --nav-bg: #555;
+  --box-shadow: 5px 5px 15px rgba(255, 255, 255, 0.2);
+  --border-color: #666;
+  --button-bg: #A0522D;
+  --button-hover-bg: #8B4513;
+  --input-border: #A0522D;
+  --input-bg: #5A2D0C;
+  --input-text: #FAEBD7;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header, nav, main, .left-col, .right-col, .histoire, .preparation {
+  background-color: var(--header-bg);
+  box-shadow: var(--box-shadow);
+  border: 2px solid var(--border-color);
+  transition: background-color 0.3s, box-shadow 0.3s, border-color 0.3s;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+/* Suppression du box-shadow et de la border pour .center-col */
+.center-col {
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+}
+
+nav {
+  background: var(--nav-bg);
+}
+
+/* Style du bouton du mode clair/sombre */
+.toggle-mode {
+  padding: 8px 16px;
+  background-color: var(--button-bg);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-mode:hover {
+  background-color: var(--button-hover-bg);
+  transform: scale(1.05);
+}
+
+/* Style du bouton pour changer la quantité */
+button {
+  padding: 8px 14px;
+  background-color: var(--button-bg);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background-color: var(--button-hover-bg);
+  transform: scale(1.05);
+}
+
+/* Style de la case pour entrer la quantité */
+input[type="number"] {
+  padding: 6px;
+  font-size: 14px;
+  border: 2px solid var(--input-border);
+  border-radius: 5px;
+  background-color: var(--input-bg);
+  color: var(--input-text);
+  text-align: center;
+  box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.2);
+  transition: border-color 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="number"]:focus {
+  outline: none;
+  border-color: var(--button-bg);
+  box-shadow: 0 0 8px rgba(139, 69, 19, 0.5);
+}

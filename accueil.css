@@ -1,0 +1,396 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    width: 100%;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .header-right .logo {
+    height: 75px;
+    width: auto;
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid #333;
+    padding: 1rem;
+    background: #fff;
+    flex: 0 0 10vh;
+    position: relative;
+  }
+  
+  .header-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+  }
+  
+  nav {
+    border: 2px solid #333;
+    padding: 1rem;
+    background: #aaa;
+    text-align: center;
+    flex: 0 0 5vh;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  main {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem;
+    width: 100%;
+    border: 2px solid #333;
+    background: #fff;
+  }
+  
+  .left-col {
+    flex: 1 1 20%;
+    border: 1px solid #999;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .center-col {
+    flex: 1 1 45%;
+    border: 2px solid #ccc;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+  }
+  
+  .center-col:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .center-col h1 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .center-col p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .histoire,
+  .preparation {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .preparation ol {
+    padding-left: 2rem;
+    margin: 0;
+  }
+  
+  .preparation ol li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+  }
+  
+  .right-col {
+    flex: 1 1 20%;
+    border: 1px solid #999;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .right-col img {
+    max-width: 110%;
+    height: auto;
+    border: 0px solid #ccc;
+  }
+  
+  .button {
+    border: 0px solid #ccc;
+  }
+  
+  .fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+  }
+  
+  .fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+  }
+  
+  img {
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  /* Ajout du mode sombre */
+  :root {
+    --background-color: #f8f8f8;
+    --text-color: #333;
+    --header-bg: #fff;
+    --nav-bg: #aaa;
+    --box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    --border-color: #ccc;
+    --button-bg: #8B4513; /* Marron foncé rappelant le caramel */
+    --button-hover-bg: #A0522D; /* Marron plus clair */
+    --input-border: #8B4513;
+    --input-bg: #FAEBD7; /* Beige rappelant la pâte */
+    --input-text: #5A2D0C; /* Marron foncé pour l'écriture */
+  }
+  
+  .dark-mode {
+    --background-color: #222;
+    --text-color: #f8f8f8;
+    --header-bg: #333;
+    --nav-bg: #555;
+    --box-shadow: 5px 5px 15px rgba(255, 255, 255, 0.2);
+    --border-color: #666;
+    --button-bg: #A0522D;
+    --button-hover-bg: #8B4513;
+    --input-border: #A0522D;
+    --input-bg: #5A2D0C;
+    --input-text: #FAEBD7;
+  }
+  
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  header, nav, main, .left-col, .right-col, .histoire, .preparation {
+    background-color: var(--header-bg);
+    box-shadow: var(--box-shadow);
+    border: 2px solid var(--border-color);
+    transition: background-color 0.3s, box-shadow 0.3s, border-color 0.3s;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+  
+  /* Suppression du box-shadow et de la border pour .center-col */
+  .center-col {
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+  }
+  
+  nav {
+    background: var(--nav-bg);
+  }
+  
+  /* Style du bouton du mode clair/sombre */
+  .toggle-mode {
+    padding: 8px 16px;
+    background-color: var(--button-bg);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .toggle-mode:hover {
+    background-color: var(--button-hover-bg);
+    transform: scale(1.05);
+  }
+  
+  /* Style du bouton pour changer la quantité */
+  button {
+    padding: 8px 14px;
+    background-color: var(--button-bg);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  button:hover {
+    background-color: var(--button-hover-bg);
+    transform: scale(1.05);
+  }
+  
+  /* Style de la case pour entrer la quantité */
+  input[type="number"] {
+    padding: 6px;
+    font-size: 14px;
+    border: 2px solid var(--input-border);
+    border-radius: 5px;
+    background-color: var(--input-bg);
+    color: var(--input-text);
+    text-align: center;
+    box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.2);
+    transition: border-color 0.3s, background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  input[type="number"]:focus {
+    outline: none;
+    border-color: var(--button-bg);
+    box-shadow: 0 0 8px rgba(139, 69, 19, 0.5);
+  }
+  
+  /* Partie inférieure - Sections spécifiques */
+  
+  /* Sections spécifiques - Kouign Amann, Judo, Ping-Pong, etc. */
+  main {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem;
+    width: 100%;
+    border: 2px solid #333;
+    background: #fff;
+  }
+  
+  .center-col {
+    flex: 1 1 45%;
+    border: 2px solid #ccc;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+  }
+  
+  .center-col:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .center-col h1 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .center-col p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Mode sombre */
+  .dark-mode .center-col {
+    background-color: #333;
+    border: 2px solid #666;
+    color: #f8f8f8;
+  }
+  
+  .dark-mode .center-col p {
+    color: #ddd;
+  }
+  
+  .dark-mode .center-col:hover {
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Ajout d'un padding supplémentaire pour les sections */
+  section {
+    padding: 2rem;
+  }
+  
+  /* Cartes spécifiques aux sections */
+  #kouign, #judo, #pingpong, #histoire {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Enlèvement des ombres pour .center-col mais ajout de la bordure et du padding dans les sections spécifiques */
+  .center-col {
+    background-color: #fff;
+    box-shadow: none;
+    border: 2px solid #ccc;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .center-col h1 {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .center-col p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Ajustements pour chaque section spécifique */
+  #kouign {
+    background-color: #fffbf2;
+  }
+  
+  #judo {
+    background-color: #f0f0f0;
+  }
+  
+  #pingpong {
+    background-color: #e6f7ff;
+  }
+  
+  #histoire {
+    background-color: #f4f4f4;
+  }
+  
+  /* Boutons d'interaction avec les sections */
+  button {
+    padding: 8px 16px;
+    background-color: #8B4513; /* Couleur du bouton en marron */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  button:hover {
+    background-color: #A0522D; /* Couleur plus claire au survol */
+    transform: scale(1.05);
+  }
+  
