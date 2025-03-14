@@ -1,0 +1,115 @@
+h1  {  text-align: center ; 
+         font-size: large ;
+		 font-size: 50pt;
+         color: brown;  
+       } 
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Effet au survol du bouton (hover) */
+button:hover {
+    background-color: #45a049;  /* Change la couleur de fond lorsque la souris survole */
+    transform: translateY(-3px); /* Légère élévation pour l'effet de survol */
+}
+
+/* Effet lorsque le bouton est cliqué (active) */
+button:active {
+    background-color: #3e8e41; /* Couleur de fond lorsque le bouton est enfoncé */
+    transform: translateY(0);   /* Reprend la position normale */
+}
+
+
+h2 {text-align: center ;
+       color: blue;
+	font-size: 25pt;
+}
+p   { text-align: justify; 
+       font-size: 18pt;         
+     }
+h3 {  text-align: center ; 
+         font-size: large ;
+		 font-size: 10pt;
+         color: green;  
+       } 
+ul {
+         font-size: large ;
+		 font-size: 20pt;
+         color: green;  
+       } 
+p1 {
+         font-size: large ;
+		 font-size: 20pt;
+         color: green;  
+       } 
+marquee {
+         font-size: large ;
+		 font-size: 20pt;
+         color: red;  
+       } 
+h3 {text-align: center ; 
+         font-size: large ;
+		 font-size: 30pt;
+         color: yellow;  
+		}
+	
+h4 {
+         text-align: center ; 
+         font-size: large ;
+		 font-size: 25pt;
+         color: brown;  
+       } 
+img {
+  width: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+video {
+  width: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+td {
+  font-size: 1em;
+  color: #555;
+}
