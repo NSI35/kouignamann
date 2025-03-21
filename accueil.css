@@ -205,7 +205,7 @@
     border-radius: 10px;
   }
   
-  /* Suppression du box-shadow et de la border pour .center-col */
+  
   .center-col {
     background-color: transparent;
     box-shadow: none;
@@ -273,9 +273,9 @@
     box-shadow: 0 0 8px rgba(139, 69, 19, 0.5);
   }
   
-  /* Partie inférieure - Sections spécifiques */
+ 
   
-  /* Sections spécifiques - Kouign Amann, Judo, Ping-Pong, etc. */
+
   main {
     display: flex;
     flex: 1;
@@ -327,17 +327,15 @@
     box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
   }
   
-  /* Ajout d'un padding supplémentaire pour les sections */
+
   section {
     padding: 2rem;
   }
   
-  /* Cartes spécifiques aux sections */
   #kouign, #judo, #pingpong, #histoire {
     margin-bottom: 1.5rem;
   }
-  
-  /* Enlèvement des ombres pour .center-col mais ajout de la bordure et du padding dans les sections spécifiques */
+ 
   .center-col {
     background-color: #fff;
     box-shadow: none;
@@ -359,7 +357,7 @@
     color: #555;
   }
   
-  /* Ajustements pour chaque section spécifique */
+
   #kouign {
     background-color: #fffbf2;
   }
@@ -376,7 +374,7 @@
     background-color: #f4f4f4;
   }
   
-  /* Boutons d'interaction avec les sections */
+
   button {
     padding: 8px 16px;
     background-color: #8B4513; /* Couleur du bouton en marron */
